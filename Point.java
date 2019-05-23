@@ -1,28 +1,40 @@
-public class Point //class
+public class Point
 {
-   private double x, y; //instance variables
+   private int xCoor, yCoor;
    
-   public Point() //default constructor
+   public Point()
    {
-   x=0;
-   y=0;
+   xCoor = 0;
+   yCoor = 0;
    }
    
-   public Point(double thisX, double thisY)//overloaded constructor
+   public Point(int x, int y)
    {
-   x = thisX;
-   y = thisY;
+   xCoor = x;
+   yCoor = y;
    }
    
-   public void setCoord(double thisX, double thisY) //mutator method - changes the values in the instance variables
+   public int getX()
    {
-   x = thisX;
-   y = thisY;
+      return xCoor;
+   }
+   
+   public int getY()
+   {
+      return yCoor;
+   }
+   
+   public Point findMidPoint(Point other)
+   {
+      Point result = new Point((this.xCoor + other.getX())/2, (this.yCoor + other.getY())/2 );
+      return result;
+   
    }
    
    public String toString()
    {
-      String output = "(" + x + "," + y + ")";
-      return output;
+   return "(" + xCoor +"," + yCoor + ")";
    }
+
+
 }

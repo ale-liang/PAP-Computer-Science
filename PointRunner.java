@@ -2,10 +2,9 @@ public class PointRunner
 {
    public static void main(String[] args)
    {
-   Point myPoint1 = new Point(5,0);
-   System.out.println(myPoint1);
+      Point oneOne = new Point(1,1);
+      Point sevenSeven = new Point(7,7);
+      System.out.println(oneOne.findMidPoint(sevenSeven));
    }
-
-
 
 }
